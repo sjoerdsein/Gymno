@@ -1,2 +1,3 @@
 # Gymno
 Website dinges voor gym
+Bart kan eindelijk werken op GitHub... Hèhè...
