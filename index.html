@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl_NL">
 
 <head>
 
-    <title>Gymno v.0.0.1</title>
+    <title>Gymno v0.0.1</title>
     <link rel="import" type="css" href="style.html">
 
     <meta charset="UTF-8">
@@ -30,6 +30,9 @@
 <body>
 
     <template is="dom-bind">
+        <div intro>
+
+        </div>
         <paper-drawer-panel>
             <paper-header-panel drawer>
                 <paper-toolbar>
@@ -52,6 +55,7 @@
 
             <paper-header-panel main>
                 <paper-toolbar>
+					<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
                     <iron-pages selected="{{page}}">
                         <section>Home</section>
                         <section>Resultaten</section>
@@ -66,6 +70,7 @@
                                     Welkom op de homepage van de <i>Gymno webapp</i>! Op deze site kun je al jouw resultaten en prestaties op het gebied van sport en gezondheid zien.
                                 </div>
                             </paper-card>
+                            <paper-card logo image="GymnoIcon.svg" style="background:#FE5000;"></paper-card>
                         </section>
                         <section></section>
                         <section></section>
@@ -75,10 +80,13 @@
         </paper-drawer-panel>
     </template>
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script>
         window.addEventListener('WebComponentsReady', function(e) {
-            var template = document.querySelector('template[is="dom-bind"]');
-            template.page = 0;
+            var app = document.querySelector('template[is="dom-bind"]');
+            app.page = 0;
+
+            // $('paper-card[logo] iron-image').load("GymnoIcon.svg");
         });
 
     </script>
