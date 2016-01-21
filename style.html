@@ -1,5 +1,7 @@
 <style is="custom-style">
     :root {
+        --orange: #FE5000;
+        --purple: #440099;
         @apply(--paper-font-common-base);
     }
 
@@ -9,6 +11,20 @@
 
     [name] {
         @apply(--paper-font-display1);
+    }
+
+    paper-toolbar {
+        --paper-toolbar-background: var(--orange);
+    }
+
+    paper-menu {
+        --paper-menu-background-color: var(--purple);
+        --paper-menu-color: var(--orange);
+    }
+
+    paper-card {
+        margin: 42px;
+        max-width: 400px;
     }
 
 </style>
