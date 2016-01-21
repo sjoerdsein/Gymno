@@ -1,0 +1,45 @@
+{
+  "name": "Gymno v.0.0.1",
+  "authors": [
+    "bschuurman99 <bschuurman99@gmail.com>"
+  ],
+  "description": "Gymno version 0.0.1",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "google-apis": "GoogleWebComponents/google-apis#^1.1.1",
+    "hydrolysis": "Polymer/hydrolysis#^1.18",
+    "google-map": "~1.1.7",
+    "font-roboto": "PolymerElements/font-roboto#^1.0.1",
+    "iron-a11y-announcer": "PolymerElements/iron-a11y-announcer#^1.0.0",
+    "iron-a11y-keys": "PolymerElements/iron-a11y-keys#^1.0.0",
+    "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
+    "iron-behaviors": "PolymerElements/iron-behaviors#^1.0.0",
+    "iron-checked-element-behavior": "PolymerElements/iron-checked-element-behavior#^1.0.0",
+    "iron-autogrow-textarea": "PolymerElements/iron-autogrow-textarea#^1.0.0",
+    "iron-collapse": "PolymerElements/iron-collapse#^1.0.0",
+    "iron-doc-viewer": "PolymerElements/iron-doc-viewer#^1.0.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "iron-dropdown": "polymerelements/iron-dropdown#^1.0.0",
+    "iron-elements": "PolymerElements/iron-elements",
+    "paper-badge": "PolymerElements/paper-badge#^1.0.0",
+    "paper-card": "PolymerElements/paper-card#^1.0.0",
+    "paper-checkbox": "PolymerElements/paper-checkbox#^1.0.0",
+    "paper-dialog": "PolymerElements/paper-dialog#^1.0.0",
+    "paper-dialog-scrollable": "PolymerElements/paper-dialog-scrollable#^1.0.0",
+    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.0",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^1.0.0",
+    "paper-fab": "PolymerElements/paper-fab#^1.0.0",
+    "paper-elements": "~1.0.7"
+  }
+}
