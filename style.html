@@ -1,50 +1,58 @@
-
 <style is="custom-style">
-    :root {
-        --orange: #FE5000;
-        --purple: #440099;
-        @apply(--paper-font-common-base);
-    }
+	:root {
+		--orange: #FE5000;
+		--purple: #440099;
+		@apply(--paper-font-common-base);
+	}
 
-    .fit {
-        border-right: 1px solid rgba(0, 0, 0, .12);
-    }
+	.fit {
+		border-right: 1px solid rgba(0, 0, 0, .12);
+	}
 
-    [name] {
-        @apply(--paper-font-display1);
-        margin-top: 6px;
-        margin-left: -4px;
-    }
+	[name] {
+		@apply(--paper-font-display1);
+		margin-top: 6px;
+		margin-left: -4px;
+	}
 
-    paper-toolbar {
-        --paper-toolbar-background: var(--orange);
-    }
+	paper-toolbar {
+		--paper-toolbar-background: var(--orange);
+	}
 
-    paper-card {
-        margin: 42px;
-        max-width: 400px;
-    }
-    /*ANIMATIE!!!*/
+	paper-card {
+		margin: 42px;
+		max-width: 400px;
+	}
+	/*ANIMATIE!!!*/
 
-    [intro] {
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-        background: var(--orange);
-        z-index: 5;
-        color: #FFFFFF;
-        @apply(--paper-font-display4);
-    }
+	[intro] {
+		position: fixed;
+		height: 100vh;
+		width: 100vw;
+		background: var(--orange);
+		z-index: 5;
+		color: #FFFFFF;
+		@apply(--paper-font-display4);
+		text-align: justify;
+		justify-content: center;
+		display: flex;
+        align-items: center;
+	}
 
-    [intro] iron-image {
-        width: 420px;
+    [intro] div {
+        left: 50%;
+		top: 50%;
         height: 420px;
-        left: 25%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: flex-end;
     }
+
+	[intro] iron-image {
+		width: 420px;
+		height: 420px;
+	}
 
     [intro] p {
+        margin: 0 0 128px -48px;;
     }
-
 </style>
