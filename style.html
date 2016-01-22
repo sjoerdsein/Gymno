@@ -4,27 +4,45 @@
         --purple: #440099;
         @apply(--paper-font-common-base);
     }
-
+    
     .fit {
         border-right: 1px solid rgba(0, 0, 0, .12);
     }
-
+    
     [name] {
         @apply(--paper-font-display1);
+        margin-top: 6px;
+        margin-left: -4px;
     }
-
+    
     paper-toolbar {
         --paper-toolbar-background: var(--orange);
     }
-
-    paper-menu {
-        --paper-menu-background-color: var(--purple);
-        --paper-menu-color: var(--orange);
-    }
-
+    
     paper-card {
         margin: 42px;
         max-width: 400px;
+    }
+    /*ANIMATIE!!!*/
+    
+    [intro] {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background: var(--orange);
+        z-index: 5;
+    }
+    
+    [intro] iron-image {
+        width: 420px;
+        height: 420px;
+        left: 25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    [intro] p {
+        @apply(--paper-font-display4);
     }
 
 </style>
