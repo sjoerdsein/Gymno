@@ -24,19 +24,22 @@
     <link rel="import" href="bower_components/iron-pages/iron-pages.html">
     <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
     <link rel="import" href="bower_components/paper-card/paper-card.html">
+    <link rel="import" href="bower_components/iron-image/iron-image.html">
 
 </head>
 
-<body>
+<body style="margin: 0; padding: 0;">
 
     <template is="dom-bind">
         <div intro>
-
+            <iron-image src="GymnoIcon.svg"></iron-image>
+            <p>ymno</p>
         </div>
         <paper-drawer-panel>
             <paper-header-panel drawer>
                 <paper-toolbar>
-                    <div name>Gymno</div>
+                    <iron-image src="GymnoIconSmall.svg" style="height:48px; width:48px;"></iron-image>
+                    <div name>ymno</div>
                 </paper-toolbar>
                 <div class="fit">
                     <paper-menu selected="{{page}}">
@@ -55,7 +58,7 @@
 
             <paper-header-panel main>
                 <paper-toolbar>
-					<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
                     <iron-pages selected="{{page}}">
                         <section>Home</section>
                         <section>Resultaten</section>

@@ -1,3 +1,4 @@
+
 <style is="custom-style">
     :root {
         --orange: #FE5000;
@@ -11,6 +12,8 @@
 
     [name] {
         @apply(--paper-font-display1);
+        margin-top: 6px;
+        margin-left: -4px;
     }
 
     paper-toolbar {
@@ -21,11 +24,27 @@
         margin: 42px;
         max-width: 400px;
     }
-
-
     /*ANIMATIE!!!*/
-    .wit {
-        fill: #CCC;
+
+    [intro] {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background: var(--orange);
+        z-index: 5;
+        color: #FFFFFF;
+        @apply(--paper-font-display4);
+    }
+
+    [intro] iron-image {
+        width: 420px;
+        height: 420px;
+        left: 25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    [intro] p {
     }
 
 </style>
