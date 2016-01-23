@@ -34,7 +34,10 @@
 		<div intro>
 			<div>
 				<iron-image src="GymnoIcon.svg"></iron-image>
-				<p>ymno</p>
+				<div divider></div>
+				<div>
+					<p>ymno</p>
+				</div>
 			</div>
 		</div>
 		<paper-drawer-panel>
@@ -85,11 +88,13 @@
 		</paper-drawer-panel>
 	</template>
 	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
 	<script>
 		window.addEventListener('WebComponentsReady', function(e) {
 			var app = document.querySelector('template[is="dom-bind"]');
 			app.page = 0;
+
+			document.querySelector('[divider]').setAttribute('animate', '');
 
 			// $('paper-card[logo] iron-image').load("GymnoIcon.svg");
 		});

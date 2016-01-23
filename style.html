@@ -36,23 +36,77 @@
 		text-align: justify;
 		justify-content: center;
 		display: flex;
-        align-items: center;
+		align-items: center;
 	}
 
-    [intro] div {
-        left: 50%;
+	[intro] > div {
+		left: 50%;
 		top: 50%;
-        height: 420px;
-        display: flex;
-        align-items: flex-end;
-    }
+		display: flex;
+		align-items: flex-end;
+	}
 
 	[intro] iron-image {
 		width: 420px;
 		height: 420px;
+		margin: -27px -51px -51px -51px;
 	}
 
-    [intro] p {
-        margin: 0 0 128px -48px;;
-    }
+	[divider][animate] {
+		background: #FFFFFF;
+		animation: 2s .5s introStartDivider;
+		margin-bottom: 171px;
+	}
+
+	[intro] div div:not([divider]) {
+		overflow: hidden
+	}
+
+	[intro] p {
+		margin: 0 0 78px -275px;
+		padding-left: 3px;
+		animation: 1.5s ease-in-out 1s introStartText forwards;
+	}
+
+	@keyframes introStartDivider {
+		0% {
+			width: 1px;
+			height: 1px;
+			margin: 171px 0 171px 3px;
+		}
+		13% {
+			height: 342px;
+			width: 1px;
+			margin: 0 0 0 3px;
+		}
+		14% {
+			width: 4px;
+			height: 342px;
+			margin: 0 0 0 3px;
+		}
+		85% {
+			width: 4px;
+			height: 342px;
+			margin: 0 0 0 3px;
+		}
+		98% {
+			height: 1px;
+			width: 4px;
+			margin: 171px 0 171px 3px;
+		}
+		100% {
+			width: 0px;
+			height: 0px;
+			margin: 171px 0 171px 3px;
+		}
+	}
+
+	@keyframes introStartText {
+		0% {
+			margin-left: -275px;
+		}
+		100% {
+			margin-left: 0;
+		}
+	}
 </style>
