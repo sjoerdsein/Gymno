@@ -27,6 +27,10 @@
 	<link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
 	<link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
 
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
@@ -46,12 +50,11 @@
 	<link rel="shortcut icon" href="/favicons/favicon.ico">
 	<meta name="apple-mobile-web-app-title" content="Gymno">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#black-transparant">
 	<meta name="application-name" content="Gymno">
 	<meta name="msapplication-TileColor" content="#440099">
 	<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
 </head>
 
 <body style="margin: 0; padding: 0; background: #FE5000;">
@@ -67,7 +70,6 @@
 			</div>
 		</div>
 		<script>
-			//window.onload = function() {
 			document.querySelector('[divider]').setAttribute('animate', '');
 			document.querySelector('[intro] p').setAttribute('animate', '');
 			document.querySelector('body').style.background = '';
@@ -75,7 +77,6 @@
 			setTimeout(function() {
 				document.querySelector('[intro]').setAttribute('transparent', '');
 			}, 5000);
-			//};
 		</script>
 
 		<paper-drawer-panel responsive-width="780px">
@@ -127,8 +128,6 @@
 			</paper-header-panel>
 		</paper-drawer-panel>
 	</template>
-	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-	<!-- <script src="bower_components/jquery/index.js"></script> -->
 	<script>
 		window.addEventListener('WebComponentsReady', function(e) {
 			var app = document.querySelector('template[is="dom-bind"]');
