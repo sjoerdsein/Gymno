@@ -27,7 +27,6 @@
 	<link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
 	<link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
 
-
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
@@ -43,39 +42,41 @@
 	<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
 	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
 	<link rel="manifest" href="/favicons/manifest.json">
-	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#FE5000">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fe5000">
 	<link rel="shortcut icon" href="/favicons/favicon.ico">
 	<meta name="apple-mobile-web-app-title" content="Gymno">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#FE5000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
 	<meta name="application-name" content="Gymno">
-	<meta name="msapplication-TileColor" content="#FE5000">
+	<meta name="msapplication-TileColor" content="#440099">
 	<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
-	<meta name="msapplication-navbutton-color" content="#FE5000">
-	<meta name="theme-color" content="#FE5000">
+	<meta name="theme-color" content="#ffffff">
 </head>
 
 <body style="margin: 0; padding: 0; background: #FE5000;">
 
 	<template is="dom-bind">
-	<div intro>
-		<div>
-			<iron-image src="GymnoIcon.svg"></iron-image>
-			<div divider></div>
+		<div intro>
 			<div>
-				<p>ymno</p>
+				<iron-image src="GymnoIcon.svg"></iron-image>
+				<div divider></div>
+				<div>
+					<p>ymno</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<script>
-		document.querySelector('[divider]').setAttribute('animate', '');
-		document.querySelector('body').style.background = '';
+		<script>
+			//window.onload = function() {
+			document.querySelector('[divider]').setAttribute('animate', '');
+			document.querySelector('[intro] p').setAttribute('animate', '');
+			document.querySelector('body').style.background = '';
 
-		setTimeout(function() {
-			document.querySelector('[intro]').setAttribute('transparent', '');
-		}, 5000);
-	</script>
+			setTimeout(function() {
+				document.querySelector('[intro]').setAttribute('transparent', '');
+			}, 5000);
+			//};
+		</script>
 
 		<paper-drawer-panel responsive-width="780px">
 			<paper-header-panel main>
