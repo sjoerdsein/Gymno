@@ -26,20 +26,30 @@
 	<link rel="import" href="bower_components/paper-card/paper-card.html">
 	<link rel="import" href="bower_components/iron-image/iron-image.html">
 
+
+	<div intro>
+		<div>
+			<iron-image src="GymnoIcon.svg"></iron-image>
+			<div divider></div>
+			<div>
+				<p>ymno</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		document.querySelector('[divider]').setAttribute('animate', '');
+
+		setTimeout(function() {
+			document.querySelector('[intro]').setAttribute('transparent', '');
+		}, 3000);
+	</script>
+
+
 </head>
 
 <body style="margin: 0; padding: 0;">
 
 	<template is="dom-bind">
-		<div intro>
-			<div>
-				<iron-image src="GymnoIcon.svg"></iron-image>
-				<div divider></div>
-				<div>
-					<p>ymno</p>
-				</div>
-			</div>
-		</div>
 		<paper-drawer-panel>
 			<paper-header-panel drawer>
 				<paper-toolbar>
@@ -88,15 +98,11 @@
 		</paper-drawer-panel>
 	</template>
 	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-	<!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+	<!-- <script src="bower_components/jquery/index.js"></script> -->
 	<script>
 		window.addEventListener('WebComponentsReady', function(e) {
 			var app = document.querySelector('template[is="dom-bind"]');
 			app.page = 0;
-
-			document.querySelector('[divider]').setAttribute('animate', '');
-
-			// $('paper-card[logo] iron-image').load("GymnoIcon.svg");
 		});
 	</script>
 </body>

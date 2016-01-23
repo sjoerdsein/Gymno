@@ -23,7 +23,6 @@
 		margin: 42px;
 		max-width: 400px;
 	}
-	/*ANIMATIE!!!*/
 
 	[intro] {
 		position: fixed;
@@ -38,6 +37,11 @@
 		display: flex;
 		align-items: center;
 	}
+
+	/*[intro][transparent] {
+		transition: opacity 1s;
+		opacity: 0;
+	}*/
 
 	[intro] > div {
 		left: 50%;
@@ -54,18 +58,19 @@
 
 	[divider][animate] {
 		background: #FFFFFF;
-		animation: 2s .5s introStartDivider;
+		animation: 2s ease .75s introStartDivider;
 		margin-bottom: 171px;
 	}
 
-	[intro] div div:not([divider]) {
+	[intro] div {
 		overflow: hidden
 	}
 
 	[intro] p {
-		margin: 0 0 78px -275px;
+		margin: 0 0 69px -420px;
 		padding-left: 3px;
 		animation: 1.5s ease-in-out 1s introStartText forwards;
+		font-size: 164px;
 	}
 
 	@keyframes introStartDivider {
@@ -81,11 +86,8 @@
 		}
 		14% {
 			width: 4px;
-			height: 342px;
-			margin: 0 0 0 3px;
 		}
 		85% {
-			width: 4px;
 			height: 342px;
 			margin: 0 0 0 3px;
 		}
@@ -97,14 +99,10 @@
 		100% {
 			width: 0px;
 			height: 0px;
-			margin: 171px 0 171px 3px;
 		}
 	}
 
 	@keyframes introStartText {
-		0% {
-			margin-left: -275px;
-		}
 		100% {
 			margin-left: 0;
 		}
