@@ -26,7 +26,6 @@
     "polymer": "polymer/Polymer",
     "paper-elements": "PolymerElements/paper-elements",
     "iron-elements": "PolymerElements/iron-elements",
-    "neon-elements": "PolymerElements/neon-elements",
     "jquery": "http://code.jquery.com/jquery-2.2.0.min.js"
   }
 }
