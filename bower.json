@@ -19,7 +19,8 @@
     "*.test",
     "idea",
     "ideas",
-    "*.idea"
+    "*.idea",
+    ".DS_Store"
   ],
   "dependencies": {
     "webcomponentsjs": "webcomponents/webcomponentsjs",
