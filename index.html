@@ -20,6 +20,7 @@
 	<link rel="import" href="bower_components/paper-card/paper-card.html">
 	<link rel="import" href="bower_components/iron-image/iron-image.html">
 	<link rel="import" href="bower_components/paper-styles/demo-pages.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
 	<link rel="import" href="bower_components/paper-styles/paper-styles.html">
 	<link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
 	<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
@@ -60,9 +61,9 @@
 <body style="margin: 0; padding: 0; background: #FE5000;">
 
 	<template is="dom-bind">
-		<div intro>
+		<!-- <div intro>
 			<div>
-				<iron-image src="GymnoIcon.svg"></iron-image>
+				<iron-image src="images/GymnoIcon.svg"></iron-image>
 				<div divider></div>
 				<div>
 					<p>ymno</p>
@@ -76,8 +77,8 @@
 
 			setTimeout(function() {
 				document.querySelector('[intro]').setAttribute('transparent', '');
-			}, 5000);
-		</script>
+			}, 2000);
+		</script> -->
 
 		<paper-drawer-panel responsive-width="780px">
 			<paper-header-panel main>
@@ -89,24 +90,41 @@
 						<section>Over jezelf</section>
 					</iron-pages>
 				</paper-toolbar>
-				<div container>
-					<iron-pages selected="{{page}}">
-						<section>
-							<paper-card heading="Welkom">
-								<div class="card-content">
-									Welkom op de homepage van de <i>Gymno webapp</i>! Op deze site kun je al jouw resultaten en prestaties op het gebied van sport en gezondheid zien.
-								</div>
-							</paper-card>
-						</section>
-						<section></section>
-						<section></section>
-					</iron-pages>
-				</div>
+				<iron-pages selected="{{page}}">
+					<section>
+						<paper-card heading="Welkom">
+							<div class="card-content">
+								Welkom op de homepage van de <i>Gymno webapp</i>! Op deze site kun je al jouw resultaten en prestaties op het gebied van sport en gezondheid zien.
+							</div>
+						</paper-card>
+					</section>
+					<section>
+						<paper-card heading="Speerwerpen" image="images/speerwerpen.jpg">
+							<div class="card-actions">
+								<paper-button purple>Bekijk resultaten</paper-button>
+								<paper-button>Over de sport</paper-button>
+							</div>
+						</paper-card>
+						<paper-card heading="Piepjestest" image="images/piepjestest.jpg">
+							<div class="card-actions">
+								<paper-button purple>Bekijk resultaten</paper-button>
+								<paper-button>Over de sport</paper-button>
+							</div>
+						</paper-card>
+						<paper-card heading="Parkloop" image="images/parkloop.jpg">
+							<div class="card-actions">
+								<paper-button purple>Bekijk resultaten</paper-button>
+								<paper-button>Over de sport</paper-button>
+							</div>
+						</paper-card>
+					</section>
+					<section></section>
+				</iron-pages>
 			</paper-header-panel>
 
 			<paper-header-panel drawer>
 				<paper-toolbar>
-					<iron-image src="GymnoIconSmall.svg" style="height:48px; width:48px; margin-bottom: 8px;"></iron-image>
+					<iron-image src="images/GymnoIconSmall.svg" style="height:48px; width:48px; margin-bottom: 8px;"></iron-image>
 					<div name>ymno</div>
 				</paper-toolbar>
 				<div class="fit">
@@ -129,11 +147,41 @@
 		</paper-drawer-panel>
 	</template>
 	<script>
-		window.addEventListener('WebComponentsReady', function(e) {
-			var app = document.querySelector('template[is="dom-bind"]');
-			app.page = 0;
+		var windowLoaded = false;
+		var webComponentsFired = false;
+
+		function init() {
+			if (windowLoaded && webComponentsFired) {
+				document.querySelector('body').style.background = '';
+
+				var app = document.querySelector('template[is="dom-bind"]');
+				app.page = 1;
+
+
+				var grad = document.createElement("div");
+				grad.setAttribute("gradient", "");
+
+				$(grad).css('position', 'absolute');
+				$(grad).css('top', 'calc(100% - 128px)');
+				$(grad).css('right', '0px');
+				$(grad).css('bottom', '3px');
+				$(grad).css('left', '0px');
+				$(grad).css('background', 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent)');
+				$(grad).insertAfter($('iron-image.paper-card:not([hidden])'));
+
+				app.page = 0;
+			}
+		};
+
+		$(window).on({
+			WebComponentsReady: function() {
+				webComponentsFired = true;
+				init();
+			}, load: function() {
+				windowLoaded = true;
+				init();
+			}
 		});
 	</script>
 </body>
-
 </html>
