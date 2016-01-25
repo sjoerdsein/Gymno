@@ -61,7 +61,7 @@
 <body style="margin: 0; padding: 0; background: #FE5000;">
 
 	<template is="dom-bind">
-		<!-- <div intro>
+		<div intro>
 			<div>
 				<iron-image src="images/GymnoIcon.svg"></iron-image>
 				<div divider></div>
@@ -78,7 +78,7 @@
 			setTimeout(function() {
 				document.querySelector('[intro]').setAttribute('transparent', '');
 			}, 2000);
-		</script> -->
+		</script>
 
 		<paper-drawer-panel responsive-width="780px">
 			<paper-header-panel main>
@@ -90,7 +90,7 @@
 						<section>Over jezelf</section>
 					</iron-pages>
 				</paper-toolbar>
-				<iron-pages selected="{{page}}">
+				<iron-pages selected="{{page}}" content>
 					<section>
 						<paper-card heading="Welkom">
 							<div class="card-content">
@@ -160,13 +160,6 @@
 
 				var grad = document.createElement("div");
 				grad.setAttribute("gradient", "");
-
-				$(grad).css('position', 'absolute');
-				$(grad).css('top', 'calc(100% - 128px)');
-				$(grad).css('right', '0px');
-				$(grad).css('bottom', '3px');
-				$(grad).css('left', '0px');
-				$(grad).css('background', 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent)');
 				$(grad).insertAfter($('iron-image.paper-card:not([hidden])'));
 
 				app.page = 0;
