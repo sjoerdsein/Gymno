@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nl_NL">
+
+<head>
+
+	<title>Gymno v0.0.1</title>
+	<link rel="import" type="css" href="style.html">
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+
+	<!-- <link rel="import" href="bower_components/"> -->
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/paper-menu/paper-menu.html">
+	<link rel="import" href="bower_components/paper-item/paper-item.html">
+	<link rel="import" href="bower_components/iron-pages/iron-pages.html">
+	<link rel="import" href="bower_components/paper-card/paper-card.html">
+	<link rel="import" href="bower_components/iron-image/iron-image.html">
+	<link rel="import" href="bower_components/paper-styles/demo-pages.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<link rel="import" href="bower_components/paper-styles/paper-styles.html">
+	<link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
+	<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+	<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+	<link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+	<link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/favicons/manifest.json">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fe5000">
+	<link rel="shortcut icon" href="/favicons/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="Gymno">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#black-transparant">
+	<meta name="application-name" content="Gymno">
+	<meta name="msapplication-TileColor" content="#440099">
+	<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+</head>
+
+<body style="margin: 0; padding: 0; background: #FE5000;">
+
+	<template is="dom-bind">
+		<!-- <div intro>
+			<div>
+				<iron-image src="images/GymnoIcon.svg"></iron-image>
+				<div divider></div>
+				<div>
+					<p>ymno</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.querySelector('[divider]').setAttribute('animate', '');
+			document.querySelector('[intro] p').setAttribute('animate', '');
+			document.querySelector('body').style.background = '';
+
+			setTimeout(function() {
+				document.querySelector('[intro]').setAttribute('transparent', '');
+			}, 2000);
+		</script> -->
+
+		<paper-drawer-panel responsive-width="780px">
+			<paper-header-panel main>
+				<paper-toolbar>
+					<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+					<iron-pages selected="{{page}}">
+						<section>Home</section>
+						<section>Resultaten</section>
+						<section>Over jezelf</section>
+					</iron-pages>
+				</paper-toolbar>
+				<iron-pages selected="{{page}}">
+					<section>
+						<paper-card heading="Welkom">
+							<div class="card-content">
+								Welkom op de homepage van de <i>Gymno webapp</i>! Op deze site kun je al jouw resultaten en prestaties op het gebied van sport en gezondheid zien.
+							</div>
+						</paper-card>
+					</section>
+					<section>
+						<paper-card heading="Speerwerpen" image="images/speerwerpen.jpg">
+							<div class="card-actions">
+								<paper-button purple>Bekijk resultaten</paper-button>
+								<paper-button>Over de sport</paper-button>
+							</div>
+						</paper-card>
+						<paper-card heading="Piepjestest" image="images/piepjestest.jpg">
+							<div class="card-actions">
+								<paper-button purple>Bekijk resultaten</paper-button>
+								<paper-button>Over de sport</paper-button>
+							</div>
+						</paper-card>
+						<paper-card heading="Parkloop" image="images/parkloop.jpg">
+							<div class="card-actions">
+								<paper-button purple>Bekijk resultaten</paper-button>
+								<paper-button>Over de sport</paper-button>
+							</div>
+						</paper-card>
+					</section>
+					<section></section>
+				</iron-pages>
+			</paper-header-panel>
+
+			<paper-header-panel drawer>
+				<paper-toolbar>
+					<iron-image src="images/GymnoIconSmall.svg" style="height:48px; width:48px; margin-bottom: 8px;"></iron-image>
+					<div name>ymno</div>
+				</paper-toolbar>
+				<div class="fit">
+					<paper-menu selected="{{page}}">
+						<paper-item>
+							Home
+							<paper-ripple></paper-ripple>
+						</paper-item>
+						<paper-item>
+							Resultaten
+							<paper-ripple></paper-ripple>
+						</paper-item>
+						<paper-item>
+							Over jezelf
+							<paper-ripple></paper-ripple>
+						</paper-item>
+					</paper-menu>
+				</div>
+			</paper-header-panel>
+		</paper-drawer-panel>
+	</template>
+	<script>
+		var windowLoaded = false;
+		var webComponentsFired = false;
+
+		function init() {
+			if (windowLoaded && webComponentsFired) {
+				document.querySelector('body').style.background = '';
+
+				var app = document.querySelector('template[is="dom-bind"]');
+				app.page = 1;
+
+
+				var grad = document.createElement("div");
+				grad.setAttribute("gradient", "");
+
+				$(grad).css('position', 'absolute');
+				$(grad).css('top', 'calc(100% - 128px)');
+				$(grad).css('right', '0px');
+				$(grad).css('bottom', '3px');
+				$(grad).css('left', '0px');
+				$(grad).css('background', 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent)');
+				$(grad).insertAfter($('iron-image.paper-card:not([hidden])'));
+
+				app.page = 0;
+			}
+		};
+
+		$(window).on({
+			WebComponentsReady: function() {
+				webComponentsFired = true;
+				init();
+			}, load: function() {
+				windowLoaded = true;
+				init();
+			}
+		});
+	</script>
+</body>
+</html>

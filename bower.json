@@ -1,0 +1,32 @@
+{
+  "name": "Gymno v.0.0.1",
+  "authors": [
+    "Bart Schuurman",
+    "Pelle Steverink",
+    "Sjoerd Seinhorst"
+  ],
+  "description": "Gymno version 0.0.1",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "*.test",
+    "idea",
+    "ideas",
+    "*.idea",
+    ".DS_Store"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs",
+    "polymer": "polymer/Polymer",
+    "paper-elements": "PolymerElements/paper-elements",
+    "iron-elements": "PolymerElements/iron-elements",
+    "jquery": "http://code.jquery.com/jquery-2.2.0.min.js"
+  }
+}
