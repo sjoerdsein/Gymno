@@ -90,7 +90,7 @@
 						<section>Over jezelf</section>
 					</iron-pages>
 				</paper-toolbar>
-				<iron-pages selected="{{page}}">
+				<iron-pages selected="{{page}}" content>
 					<section>
 						<paper-card heading="Welkom">
 							<div class="card-content">
@@ -127,7 +127,7 @@
 					<iron-image src="images/GymnoIconSmall.svg" style="height:48px; width:48px; margin-bottom: 8px;"></iron-image>
 					<div name>ymno</div>
 				</paper-toolbar>
-				<div class="fit">
+				<nav class="fit">
 					<paper-menu selected="{{page}}">
 						<paper-item>
 							Home
@@ -142,7 +142,7 @@
 							<paper-ripple></paper-ripple>
 						</paper-item>
 					</paper-menu>
-				</div>
+				</nav>
 			</paper-header-panel>
 		</paper-drawer-panel>
 	</template>
@@ -160,13 +160,6 @@
 
 				var grad = document.createElement("div");
 				grad.setAttribute("gradient", "");
-
-				$(grad).css('position', 'absolute');
-				$(grad).css('top', 'calc(100% - 128px)');
-				$(grad).css('right', '0px');
-				$(grad).css('bottom', '3px');
-				$(grad).css('left', '0px');
-				$(grad).css('background', 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent)');
 				$(grad).insertAfter($('iron-image.paper-card:not([hidden])'));
 
 				app.page = 0;
