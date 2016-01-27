@@ -91,14 +91,45 @@
                     </iron-pages>
                 </paper-toolbar>
                 <iron-pages selected="{{page}}" content>
-                    <section>
+                    <section home>
                         <paper-card heading="Welkom">
                             <div class="card-content">
                                 Welkom op de homepage van de <i>Gymno webapp</i>! Op deze site kun je al jouw resultaten en prestaties op het gebied van sport en gezondheid zien.
                             </div>
                         </paper-card>
+                        <paper-card heading="Recente scores">
+                            <div class="card-content">
+                                <table recent>
+                                    <tr>
+                                        <th>Sport</th>
+                                        <th>Resultaat</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Speerwerpen</td>
+                                        <td>98,49 meter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Piepjestest</td>
+                                        <td>trap 17,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Parkloop</td>
+                                        <td>10 km (in half uur)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dwergwerpen</td>
+                                        <td>3,5 meter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kaasrollen</td>
+                                        <td>16/25 kazen</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </paper-card>
                     </section>
-                    <section>
+
+                    <section resultaten>
                         <paper-card heading="Speerwerpen" image="images/speerwerpen.jpg">
                             <div class="card-actions">
                                 <paper-button purple>Bekijk resultaten</paper-button>
@@ -130,7 +161,9 @@
                             </div>
                         </paper-card>
                     </section>
-                    <section></section>
+                    <section overjezelf>
+
+                    </section>
                 </iron-pages>
             </paper-header-panel>
 
