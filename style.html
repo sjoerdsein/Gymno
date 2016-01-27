@@ -6,7 +6,7 @@
         color: rgba(0, 0, 0, .87);
     }
 
-    nav {
+    .fit {
         border-right: 1px solid rgba(0, 0, 0, .12);
     }
 
@@ -21,19 +21,30 @@
         @apply(--paper-font-title);
     }
 
-    [content] {
-        columns: auto 3;
-        margin: 5% auto 0;
-        width: 932px;
+    [content] section {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        padding: 4px;
     }
 
     paper-card {
-        margin: 0 0 auto;
-        max-width: 300px;
+        display: inline-block;
+        margin: 4px;
+        width: 400px;
         --paper-card-header-image-text: {
             color: #FFFFFF;
         }
         ;
+    }
+
+    [gradient] {
+        position: absolute;
+        top: calc(100% - 128px);
+        right: 0px;
+        bottom: 3px;
+        left: 0px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent);
     }
 
     paper-button {
@@ -52,15 +63,6 @@
 
     .card-actions {
         padding: 8px;
-    }
-
-    [gradient] {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 3px;
-        left: 0px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent);
     }
     /*Animatie*/
 
