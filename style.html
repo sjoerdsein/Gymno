@@ -1,214 +1,213 @@
 <style is="custom-style">
-    :root {
-        --orange: #FE5000;
-        --purple: #440099;
-        @apply(--paper-font-common-base);
-        color: rgba(0, 0, 0, .87);
-    }
+	:root {
+		--orange: #FE5000;
+		--purple: #440099;
+		@apply(--paper-font-common-base);
+		color: rgba(0, 0, 0, .87);
+	}
 
-    .fit {
-        border-right: 1px solid rgba(0, 0, 0, .12);
-    }
+	nav {
+		border-right: 1px solid rgba(0, 0, 0, .12);
+	}
 
-    [name] {
-        @apply(--paper-font-display1);
-        margin-top: 6px;
-        margin-left: -4px;
-    }
+	[name] {
+		@apply(--paper-font-display1);
+		margin-top: 6px;
+		margin-left: -4px;
+	}
 
-    paper-toolbar {
-        --paper-toolbar-background: var(--orange);
-        @apply(--paper-font-title);
-    }
+	paper-toolbar {
+		--paper-toolbar-background: var(--orange);
+		@apply(--paper-font-title);
+	}
 
-    [content] section {
-        display: flex;
-        justify-content: center;
-        flex-flow: wrap;
-        padding: 4px;
-    }
+	[content] {
+		columns: auto 3;
+		margin: 5% auto 0;
+		width: 932px;
+	}
 
-    paper-card {
-        display: inline-block;
-        margin: 4px;
-        width: 400px;
-        --paper-card-header-image-text: {
-            color: #FFFFFF;
-        }
-        ;
-    }
+	paper-card {
+		margin: 0 0 auto;
+		max-width: 300px;
+		--paper-card-header-image-text: {
+			color: #FFFFFF;
+		};
+	}
 
-    [gradient] {
-        position: absolute;
-        top: calc(100% - 128px);
-        right: 0px;
-        bottom: 3px;
-        left: 0px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent);
-    }
+	paper-button {
+		font-weight: 500;
+		margin: 0;
+		text-transform: uppercase;
+	}
 
-    paper-button {
-        font-weight: 500;
-        margin: 0;
-        text-transform: uppercase;
-    }
+	paper-button[purple] {
+		color: var(--purple);
+	}
 
-    paper-button[purple] {
-        color: var(--purple);
-    }
+	.card-content {
+		padding: 24px 16px 16px;
+	}
 
-    .card-content {
-        padding: 24px 16px 16px;
-    }
+	.card-actions {
+		padding: 8px;
+	}
 
-    .card-actions {
-        padding: 8px;
-    }
-    /*Animatie*/
+	[gradient] {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 3px;
+		left: 0px;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent);
+	}
 
-    [intro] {
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-        background: var(--orange);
-        z-index: 5;
-        color: #FFFFFF;
-        @apply(--paper-font-display4);
-        text-align: justify;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        top: 0;
-        /*opacity: .8;*/
-    }
 
-    [intro][transparent] {
-        transition: opacity 1s, visibility 1s;
-        opacity: 0;
-        visibility: hidden;
-    }
 
-    [intro] > div {
-        left: 50%;
-        top: 50%;
-        display: flex;
-        align-items: flex-end;
-    }
+	/*Animatie*/
 
-    [intro] iron-image {
-        width: 420px;
-        height: 420px;
-        margin: -27px -51px -51px -51px;
-    }
+	[intro] {
+		position: fixed;
+		height: 100vh;
+		width: 100vw;
+		background: var(--orange);
+		z-index: 5;
+		color: #FFFFFF;
+		@apply(--paper-font-display4);
+		text-align: justify;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		top: 0;
+		/*opacity: .8;*/
+	}
 
-    [divider] {
-        background: #FFFFFF;
-        margin: 0 0 171px 8px;
-    }
+	[intro][transparent] {
+		transition: opacity 1s, visibility 1s;
+		opacity: 0;
+		visibility: hidden;
+	}
 
-    [divider][animate] {
-        animation: 1s .875s introStartDivider;
-    }
+	[intro] > div {
+		left: 50%;
+		top: 50%;
+		display: flex;
+		align-items: flex-end;
+	}
 
-    [intro] div {
-        overflow: hidden
-    }
+	[intro] iron-image {
+		width: 420px;
+		height: 420px;
+		margin: -27px -51px -51px -51px;
+	}
 
-    [intro] p {
-        width: 400px;
-        margin: 0 0 69px -400px;
-        font-size: 164px;
-    }
+	[divider] {
+		background: #FFFFFF;
+		margin: 0 0 171px 8px;
+	}
 
-    [intro] p[animate] {
-        animation: .75s ease-in-out 1s introStartText forwards;
-    }
+	[divider][animate] {
+		animation: 1s .875s introStartDivider;
+	}
 
-    @keyframes introStartDivider {
-        0% {
-            width: 1px;
-            height: 1px;
-            margin: 0 0 171px 10px;
-        }
-        13% {
-            height: 342px;
-            width: 1px;
-            margin: 0 0 0 10px;
-        }
-        14% {
-            width: 4px;
-            margin: 0 0 0 8px;
-        }
-        85% {
-            height: 342px;
-            margin: 0 0 0 8px;
-        }
-        98% {
-            height: 1px;
-            width: 4px;
-            margin: 0 0 171px 8px;
-        }
-        100% {
-            width: 0px;
-            height: 0px;
-        }
-    }
+	[intro] div {
+		overflow: hidden
+	}
 
-    @keyframes introStartText {
-        100% {
-            margin-left: 0;
-        }
-    }
+	[intro] p {
+		width: 400px;
+		margin: 0 0 69px -400px;
+		font-size: 164px;
+	}
 
-    [container] {
-        display: flex;
-        justify-content: space-around;
-    }
-    /*Aangepast voor kleine schermen*/
+	[intro] p[animate] {
+		animation: .75s ease-in-out 1s introStartText forwards;
+	}
 
-    @media (max-width: 780px) {
-        [intro] p {
-            width: 160px;
-            font-size: 72px;
-            margin: 0 0 -11px -200px;
-        }
-        [intro] iron-image {
-            width: 160px;
-            height: 160px;
-            margin: -10px -18px -18px -18px;
-        }
-        [divider][animate] {
-            margin: 0 0 66px 2px
-        }
-        @keyframes introStartDivider {
-            0% {
-                width: 1px;
-                height: 1px;
-                margin: 0 0 66px 4px;
-            }
-            13% {
-                height: 132px;
-                width: 1px;
-                margin: 0 0 0 4px;
-            }
-            14% {
-                width: 2px;
-                margin: 0 0 0 3px;
-            }
-            85% {
-                height: 132px;
-                margin: 0 0 0 3px;
-            }
-            98% {
-                height: 1px;
-                width: 2px;
-                margin: 0 0 66px 3px;
-            }
-            100% {
-                width: 0px;
-                height: 0px;
-            }
-        }
-    }
+	@keyframes introStartDivider {
+		0% {
+			width: 1px;
+			height: 1px;
+			margin: 0 0 171px 10px;
+		}
+		13% {
+			height: 342px;
+			width: 1px;
+			margin: 0 0 0 10px;
+		}
+		14% {
+			width: 4px;
+			margin: 0 0 0 8px;
+		}
+		85% {
+			height: 342px;
+			margin: 0 0 0 8px;
+		}
+		98% {
+			height: 1px;
+			width: 4px;
+			margin: 0 0 171px 8px;
+		}
+		100% {
+			width: 0px;
+			height: 0px;
+		}
+	}
 
+	@keyframes introStartText {
+		100% {
+			margin-left: 0;
+		}
+	}
+
+	[container] {
+		display: flex;
+		justify-content: space-around;
+	}
+	/*Aangepast voor kleine schermen*/
+
+	@media (max-width: 780px) {
+		[intro] p {
+			width: 160px;
+			font-size: 72px;
+			margin: 0 0 -11px -200px;
+		}
+		[intro] iron-image {
+			width: 160px;
+			height: 160px;
+			margin: -10px -18px -18px -18px;
+		}
+		[divider][animate] {
+			margin: 0 0 66px 2px
+		}
+		@keyframes introStartDivider {
+			0% {
+				width: 1px;
+				height: 1px;
+				margin: 0 0 66px 4px;
+			}
+			13% {
+				height: 132px;
+				width: 1px;
+				margin: 0 0 0 4px;
+			}
+			14% {
+				width: 2px;
+				margin: 0 0 0 3px;
+			}
+			85% {
+				height: 132px;
+				margin: 0 0 0 3px;
+			}
+			98% {
+				height: 1px;
+				width: 2px;
+				margin: 0 0 66px 3px;
+			}
+			100% {
+				width: 0px;
+				height: 0px;
+			}
+		}
+	}
 </style>
