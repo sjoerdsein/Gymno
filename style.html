@@ -4,6 +4,7 @@
         --purple: #440099;
         @apply(--paper-font-common-base);
         color: rgba(0, 0, 0, .87);
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
 
     .fit {
@@ -29,21 +30,19 @@
     }
 
     paper-card {
-        display: inline-block;
-        margin: 4px;
+        margin: 4px 4px auto;
         width: 400px;
         --paper-card-header-image-text: {
             color: #FFFFFF;
-        }
-        ;
+        };
     }
 
     [gradient] {
         position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 3px;
-        left: 0px;
+        top: 0;
+        right: 0;
+        bottom: 4px;
+        left: 0;
         background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25) 30%, transparent);
     }
 
@@ -57,11 +56,11 @@
         color: var(--purple);
     }
 
-    .card-content {
+    [card-content] {
         padding: 24px 16px 16px;
     }
 
-    .card-actions {
+    [card-actions] {
         padding: 8px;
     }
     /*Animatie*/
